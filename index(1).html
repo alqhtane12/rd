@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cleaned Page with Sound, Small Video, and Red Text">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="pragma" content="no-cache">
+  <title>Cleaned Page with Small Video and Red Text</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    video {
+      width: 400px; /* حجم الفيديو */
+      height: auto;
+      border: none; /* إزالة الإطار */
+      background-color: black; /* ضمان أن الخلفية تكون سوداء خلف الفيديو */
+    }
+    .content {
+      color: red; /* تغيير لون النص إلى الأحمر */
+      text-align: center;
+      z-index: 2;
+      margin-top: 20px;
+    }
+    h1, p, #clock {
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+    }
+  </style>
+
+  <script>
+    // Function to play sound on click or hover
+    function playSound() {
+      var audio = document.querySelector("audio");
+      audio.play();
+    }
+  </script>
+</head>
+
+<body onclick="playSound()" onmouseover="playSound()">
+  
+  <!-- الفيديو في المنتصف -->
+  <div class="video-container">
+    <video autoplay loop muted>
+      <source src="https://cdn.discordapp.com/attachments/1293893828566323222/1294934969902301194/-17256499154981989751.mp4?ex=670cd1ab&is=670b802b&hm=0ada8d1c5e77eddb575bd0a7fe874f1105c554fd30ad18c99294842161360a00&" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- الصوت -->
+  <audio src="https://cdn.discordapp.com/attachments/1293893828566323222/1294300749869613066/savetik_1.mov?ex=670c7d41&is=670b2bc1&hm=eed250426597431cc655f54700dca54ffbbd0b884ca0e60b0babab540e80ab7a&" loop></audio>
+
+  <!-- المحتوى النصي تحت الفيديو -->
+  <div class="content">
+    <h1>Hacked by ( Boshikha & Relx ) </h1>
+    <p>DISCORD.GG/5-1</p>
+    <div id="clock"></div>
+  </div>
+
+  <!-- ساعة بسيطة -->
+  <script>
+    setInterval(function() {
+      var now = new Date();
+      var time = now.toLocaleTimeString();
+      document.getElementById('clock').textContent = time;
+    }, 1000);
+  </script>
+
+</body>
+</html>
